@@ -1,0 +1,5 @@
+Prompt chaining for Job description Expansio to fit relevant skills not exactly the same.
+Questions around the organisation culture - then score the cadidate's cultural fit with the organisation.
+Hrithik Sarda may consider to research on ATS system recruiters use for candidates sorting...
+Skill based scoring for all the skills in Job description - Expereince based(years, scale[large or small scale exmp], Tools based expereince)
+Code for prompt splitting into chunks based on task complexity

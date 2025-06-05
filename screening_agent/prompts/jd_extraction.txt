@@ -1,0 +1,33 @@
+You are an expert HR analyst. Given the following job description, extract and return the information as a JSON object using the following fields:
+- required_skills: list of required skills/technologies
+- preferred_skills: list of nice-to-have skills
+- min_experience_years: minimum years of experience required (integer)
+- max_experience_years: maximum years of experience mentioned in the job description experience range (if no range is mentioned then return empty string)
+- required_qualifications: degrees, certifications, or licenses required
+- domain: main business domain or industry (e.g., healthcare, fintech)
+- soft_skills: list of soft skills mentioned (e.g., communication, leadership)
+- other_notes: any other important requirements
+
+### Example input:
+"""
+Software Engineer: We are seeking a talented engineer skilled in Python, Django, and RESTful APIs, with at least 3-5 years of experience in web development. A Bachelor’s degree in Computer Science is required. Great communication and teamwork are essential.
+"""
+
+### Example output:
+{
+  "required_skills": ["Python", "Django", "RESTful APIs"],
+  "preferred_skills": [],
+  "min_experience_years": 3,
+  "min_experience_years": 5,
+  "required_qualifications": ["Bachelor’s degree in Computer Science"],
+  "domain": "Software Engineering",
+  "soft_skills": ["communication", "teamwork"],
+  "other_notes": []
+}
+
+Now, use this same JSON structure and extract information from the following job description:
+"""
+{JD_TEXT}
+"""
+
+Return the JSON object ONLY. Do not include any explanation or extra text.

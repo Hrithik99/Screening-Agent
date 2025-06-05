@@ -1,0 +1,6 @@
+openai
+dotenv
+requests
+pdfminer.six
+python-docx
+spacy

@@ -1,0 +1,70 @@
+You are an expert HR analyst. Extract structured information from the following candidate resume.
+
+Return the information as a single JSON object using these fields:
+- name: full name of candidate (if present)
+- email: email address (if present)
+- phone: phone number (if present)
+- skills: list of hard and soft skills
+- past_roles: list of objects, each with "title", "company", "start_year", "end_year" (if available)
+- education: list of objects, each with "degree", "institution", "year" (if available)
+- certifications: list of certificates or licenses (if present)
+- projects: list of notable projects (if mentioned; else leave empty)
+- soft_skills: list of soft skills or behavioral traits
+- other_notes: any other important details
+
+### Example input:
+"""
+John Doe  
+Email: john.doe@email.com  
+Phone: +1 555 123 4567  
+
+Skills: Python, Data Analysis, Machine Learning, Communication
+
+Experience:  
+- Data Scientist at Acme Corp (2019-2022)  
+- Data Analyst at Beta Analytics (2016-2019)
+
+Education:  
+- MSc Data Science, University of Example (2016)  
+- BSc Mathematics, College of Math (2014)
+
+Certifications:  
+- AWS Certified Solutions Architect  
+- TensorFlow Developer Certificate
+
+Projects:  
+- Built a customer churn prediction model  
+- Developed a sales dashboard in Power BI
+
+Strengths: Analytical thinking, teamwork, self-motivation
+"""
+
+### Example output:
+{
+  "name": "John Doe",
+  "email": "john.doe@email.com",
+  "phone": "+1 555 123 4567",
+  "skills": ["Python", "Data Analysis", "Machine Learning", "Communication"],
+  "past_roles": [
+    {"title": "Data Scientist", "company": "Acme Corp", "start_year": 2019, "end_year": 2022},
+    {"title": "Data Analyst", "company": "Beta Analytics", "start_year": 2016, "end_year": 2019}
+  ],
+  "education": [
+    {"degree": "MSc Data Science", "institution": "University of Example", "year": 2016},
+    {"degree": "BSc Mathematics", "institution": "College of Math", "year": 2014}
+  ],
+  "certifications": ["AWS Certified Solutions Architect", "TensorFlow Developer Certificate"],
+  "projects": [
+    "Built a customer churn prediction model",
+    "Developed a sales dashboard in Power BI"
+  ],
+  "soft_skills": ["Analytical thinking", "teamwork", "self-motivation"],
+  "other_notes": []
+}
+
+Now, extract using the same structure from the following resume:
+"""
+{RESUME_TEXT}
+"""
+
+Return the JSON object ONLY. Do not include any explanation or extra text.

@@ -1,0 +1,42 @@
+Dy. Manager / Manager - Full Stack Developer (Flutter & Node.js)
+Location: Experience: Min 7-10 years
+Job Description:
+We are seeking a Full Stack Developers proficient in both Flutter for mobile application development and Node.js for backend development. As a Full Stack Developer, the candidate will be responsible for designing, developing, testing, and deploying high-quality mobile applications and backend systems. The candidate should have a strong understanding of Flutter framework, Dart programming language, Node.js, and modern web technologies.
+
+Key Responsibilities:
+Design and develop cross-platform mobile applications using Flutter framework for both Android and iOS platforms.
+Develop and maintain server-side logic using Node.js for backend APIs and services.
+Collaborate with cross-functional teams including UI/UX designers, product managers, and other developers to deliver scalable and efficient solutions.
+Write clean, maintainable, and efficient code following coding standards and best practices.
+Integrate mobile applications with backend APIs and third-party services.
+Implement authentication, authorization, and security features for mobile applications and backend systems.
+Troubleshoot and debug issues to ensure the performance, quality, and reliability of applications.
+Optimize application performance, scalability, and responsiveness.
+Stay up-to-date with the latest trends and technologies in mobile app development, web development, Flutter, and Node.js.
+Continuously discover, evaluate, and implement new tools, frameworks, and technologies to improve development efficiency.
+Participate in code reviews, discussions, and brainstorming sessions to improve overall team productivity and code quality.
+Collaborate with QA team to ensure thorough testing and bug-fixing of applications and backend systems.
+Assist in the deployment of applications and backend systems to production environments.
+
+Requirements & Skills:
+Proven experience in mobile app development using Flutter framework.
+Strong proficiency in Dart programming language.
+Experience in backend development using Node.js and Express.js.
+Familiarity with relational and NoSQL databases such as MySQL, MongoDB, etc.
+Solid understanding of RESTful APIs and web services.
+Experience with front-end web technologies such as HTML5, CSS3, and JavaScript.
+Knowledge of modern JavaScript frameworks/libraries such as React.js, Angular, or Vue.js is a plus.
+Experience with version control systems such as Github.
+Strong problem-solving skills and attention to detail.
+Ability to work independently as well as collaboratively in a team environment.
+Excellent communication and interpersonal skills.
+Understanding of data security concepts.
+
+Experience:
+Min 7-10 years’ experience required.
+Have a constructive mind-set, constantly looking forward to enchantments.
+Passionate about developing innovative mobile applications and backend systems
+
+Education:
+MCA, MSc Computer Science (Optional)
+BE/ BTech, preferably with strong curriculum in Computer Sciences
