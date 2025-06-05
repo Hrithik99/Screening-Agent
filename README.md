@@ -102,69 +102,40 @@ screening_agent/
 ```sh
 python screening_agent/modules/jd_parser.py data/job_descriptions/sample_jd.txt
 
-Usage
-1. Parse a Resume (NLP-based, section-aware)
-sh
-Copy
-Edit
+## 2. Parse a Resume (NLP‑based, section‑aware)
+
+```sh
 python screening_agent/modules/resume_scraper_nlp.py data/resumes/sample_resume.pdf
-2. Parse a Resume (LLM-based, for finalists)
-sh
-Copy
-Edit
-python screening_agent/modules/resume_parser.py data/resumes/sample_resume.txt
-3. (Coming soon) Run the full semantic screening pipeline
-TBD once the semantic matcher is integrated.
 
-How It Works
-Job Description and Resume are parsed into structured JSON.
+## 3. (Coming soon) Run the full semantic screening pipeline
 
-Section-based logic ensures robust field extraction even for noisy/complex resumes.
+### How It Works
+- **Job Description** and **Resume** are parsed into structured JSON  
+- **Section‑based logic** ensures robust field extraction even for noisy/complex resumes  
+- **Semantic matcher** compares parsed fields, calculates sub‑scores, and ranks candidates  
+- **Logging, config, and fallback** features make the system production‑ready  
 
-Semantic matcher compares parsed fields, calculates sub-scores, and ranks candidates.
+### Configuration
+Edit `config/config.yaml` to adjust scoring thresholds, weights, and pipeline settings.
 
-Logging, configuration, and fallback mechanisms make the system production-ready.
+### Roadmap
+- Add full semantic matcher and scoring pipeline  
+- Add recruiter feedback/override interface  
+- Implement FastAPI/REST endpoints for integration  
+- Add end‑to‑end pipeline runner CLI  
+- Improve skills and experience normalization  
+- Extend to GUI or dashboard  
 
-Configuration
-Adjust scoring thresholds, weights, and other pipeline settings in:
+### Contributing
+PRs and issues welcome!  
+Please raise issues for bugs, enhancement requests, or resume parsing edge cases.
 
-text
-Copy
-Edit
-config/config.yaml
-Roadmap
- Add full semantic matcher and scoring pipeline
-
- Add recruiter feedback/override interface
-
- Implement FastAPI/REST endpoints for integration
-
- Add end-to-end pipeline runner CLI
-
- Improve skills and experience normalization
-
- Extend to GUI or dashboard
-
-Contributing
-Contributions are welcome!
-Feel free to open issues for bugs, enhancement requests, or resume-parsing edge cases, and submit PRs.
-
-License
+### License
 MIT
 
-Acknowledgments
-Built with:
-
-spaCy
-
-pdfminer.six
-
-python-docx
-
-Ollama
-
-Inspired by best practices in large-scale resume screening and ATS platforms.
-
+### Acknowledgments
+Built using **spaCy**, **pdfminer.six**, **python‑docx**, and **Ollama**  
+Inspired by best practices in large‑scale resume screening and ATS platforms.
 
 
 
