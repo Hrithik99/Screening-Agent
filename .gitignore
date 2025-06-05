@@ -1,0 +1,75 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+ENV/
+venv/
+.screening/
+# If you use Poetry or Pipenv, you can also add
+.poetry/
+Pipfile.lock
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS and system files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints (if you add notebooks later)
+.ipynb_checkpoints/
+
+# Test and coverage outputs
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+.cache
+nosetests.xml
+pytest_cache/
+test-results/
+
+# Environment/config files
+.env
+*.env
+*.env.*
+
+# Data and log folders
+logs/
+data/outputs/
+data/*.csv
+data/*.xlsx
+data/*.pkl
+data/*.db
+data/*.sqlite
+*.log
+
+# Model and cache files
+*.h5
+*.pth
+*.ckpt
+*.pt
+*.pkl
+*.joblib
+
+# PDF/DOCX resumes (do not upload sample or personal resumes)
+data/resumes/*.pdf
+data/resumes/*.docx
+data/job_descriptions/*.pdf
+data/job_descriptions/*.docx
+
+# Exclude model/AI artifacts
+*.onnx
+*.tflite
+*.pb
+
+# Misc
+*.bak
+*.tmp
