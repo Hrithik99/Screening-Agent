@@ -32,26 +32,26 @@ screening_agent/
 ├── README.md
 ├── requirements.txt
 ├── config/
-│ └── config.yaml
+│   └── config.yaml
 ├── data/
-│ ├── resumes/
-│ ├── job_descriptions/
-│ └── outputs/
+│   ├── resumes/
+│   ├── job_descriptions/
+│   └── outputs/
 ├── logs/
 ├── screening_agent/
-│ ├── init.py
-│ ├── main.py
-│ ├── pipeline.py
-│ ├── modules/
-│ │ ├── jd_parser.py
-│ │ ├── resume_parser.py
-│ │ ├── resume_scraper_nlp.py
-│ │ ├── semantic_matcher.py
-│ │ └── local_model.py
-│ └── prompts/
-│ ├── jd_extraction.txt
-│ ├── resume_extraction.txt
-│ └── ...
+│   ├── __init__.py
+│   ├── main.py
+│   ├── pipeline.py
+│   ├── modules/
+│   │   ├── jd_parser.py
+│   │   ├── resume_parser.py
+│   │   ├── resume_scraper_nlp.py
+│   │   ├── semantic_matcher.py
+│   │   └── local_model.py
+│   └── prompts/
+│       ├── jd_extraction.txt
+│       ├── resume_extraction.txt
+│       └── ...
 │
 └── .gitignore
 
