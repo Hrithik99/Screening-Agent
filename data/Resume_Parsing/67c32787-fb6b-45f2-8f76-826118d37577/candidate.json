@@ -1,0 +1,54 @@
+{
+  "name": "John Doe",
+  "email": "john.doe@email.com",
+  "phone": "+1 555 123 4567",
+  "skills": [
+    "Python",
+    "Data Analysis",
+    "Machine Learning",
+    "Communication"
+  ],
+  "past_roles": [
+    {
+      "title": "Data Scientist",
+      "company": "Acme Corp",
+      "start_year": 2019,
+      "end_year": 2022,
+      "job_duties": []
+    },
+    {
+      "title": "Data Analyst",
+      "company": "Beta Analytics",
+      "start_year": 2016,
+      "end_year": 2019,
+      "job_duties": []
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc Data Science",
+      "institution": "University of Example",
+      "year": 2016
+    },
+    {
+      "degree": "BSc Mathematics",
+      "institution": "College of Math",
+      "year": 2014
+    }
+  ],
+  "certifications": [
+    "AWS Certified Solutions Architect",
+    "TensorFlow Developer Certificate"
+  ],
+  "projects": [
+    "Built a customer churn prediction model",
+    "Developed a sales dashboard in Power BI"
+  ],
+  "soft_skills": [
+    "Analytical thinking",
+    "teamwork",
+    "self-motivation"
+  ],
+  "other_notes": [],
+  "JOB_ID": "67c32787-fb6b-45f2-8f76-826118d37577"
+}

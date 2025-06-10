@@ -1,9 +1,10 @@
-import os
+import os,sys
 import re
 import spacy
 from pdfminer.high_level import extract_text
 from docx import Document
 from dateutil import parser as dateparser
+from pprint import pprint
 
 # Initialize spaCy once
 NLP = spacy.load("en_core_web_sm")
@@ -217,11 +218,11 @@ def nlp_resume_parse(resume_path):
 
 # CLI for quick test
 if __name__ == "__main__":
-    import sys
+    
     if len(sys.argv) > 1:
         resume_path = sys.argv[1]
     else:
         resume_path = "data\\resumes\\Hrithik_Resume.pdf"
         print(f"No file specified, using default: {resume_path}")
-    from pprint import pprint
+    
     pprint(nlp_resume_parse(resume_path))

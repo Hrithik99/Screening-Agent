@@ -4,3 +4,4 @@ requests
 pdfminer.six
 python-docx
 spacy
+python-dateutil

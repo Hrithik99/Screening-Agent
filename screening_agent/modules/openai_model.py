@@ -9,7 +9,7 @@ MODEL = "gpt-4o-mini"     # or "gpt-4o"
 
 def generate(prompt: str,
              system: str,
-             max_tokens: int = 1000,
+             max_tokens: int = 1500,
              temperature: float = 0.4) -> str:
     prompt = textwrap.dedent(prompt).strip()
     resp = client.chat.completions.create(

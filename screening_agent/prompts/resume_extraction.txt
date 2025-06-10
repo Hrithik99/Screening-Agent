@@ -5,7 +5,7 @@ Return the information as a single JSON object using these fields:
 - email: email address (if present)
 - phone: phone number (if present)
 - skills: list of hard and soft skills
-- past_roles: list of objects, each with "title", "company", "start_year", "end_year" (if available)
+- past_roles: list of objects, each with "title", "company", "start_month_year": "month/year" in number, "end_month_year": "month/year in number" (if available)
 - education: list of objects, each with "degree", "institution", "year" (if available)
 - certifications: list of certificates or licenses (if present)
 - projects: list of notable projects (if mentioned; else leave empty)
@@ -21,8 +21,11 @@ Phone: +1 555 123 4567
 Skills: Python, Data Analysis, Machine Learning, Communication
 
 Experience:  
-- Data Scientist at Acme Corp (2019-2022)  
-- Data Analyst at Beta Analytics (2016-2019)
+- Data Scientist at Acme Corp (June,2019-July,2022)  
+Created an LLM pipeline using AWS BEdrock
+
+- Data Analyst at Beta Analytics (Jan,2016-May,2019)
+Created PowerBI Dashboards for marketing team 
 
 Education:  
 - MSc Data Science, University of Example (2016)  
@@ -46,8 +49,8 @@ Strengths: Analytical thinking, teamwork, self-motivation
   "phone": "+1 555 123 4567",
   "skills": ["Python", "Data Analysis", "Machine Learning", "Communication"],
   "past_roles": [
-    {"title": "Data Scientist", "company": "Acme Corp", "start_year": 2019, "end_year": 2022},
-    {"title": "Data Analyst", "company": "Beta Analytics", "start_year": 2016, "end_year": 2019}
+    {"title": "Data Scientist", "company": "Acme Corp", "start_year": 06/2019, "end_year": 07/2022, "job_duties":"Created an LLM pipeline using AWS BEdrock"},
+    {"title": "Data Analyst", "company": "Beta Analytics", "start_year": 01/2016, "end_year": 05/2019, "job_duties":"Created PowerBI Dashboards for marketing team "}
   ],
   "education": [
     {"degree": "MSc Data Science", "institution": "University of Example", "year": 2016},
