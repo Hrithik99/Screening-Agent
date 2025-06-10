@@ -1,71 +1,89 @@
 import json
-import time
-from local_model import _call_ollama
-from openai_model import generate as gpt_generate   # fallback
 import os
+import time
+import uuid
+from local_model import _call_ollama
+from openai_model import generate as gpt_generate  # fallback
 
-PROMPT_PATH = os.path.join(os.path.dirname(__file__), "../prompts/jd_extraction.txt")
+# ---------- paths -----------------------------------------------------------
+BASE_DIR      = os.path.dirname(__file__)               # …/screening_agent/modules
+PROMPT_PATH   = os.path.join(BASE_DIR, "../prompts/jd_extraction.txt")
+OUTPUT_DIR    = os.path.join(BASE_DIR, "../../data/JD_JSON_Extracted")
 
-def load_prompt_template(path):
-    with open(path, 'r', encoding='utf-8') as f:
+# ---------- helpers ---------------------------------------------------------
+def load_prompt_template(path: str) -> str:
+    with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
-def extract_jd_requirements(jd_text, max_retries=3):
+def _ensure_output_dir():
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+def _save_json(job_id: str, data: dict):
+    _ensure_output_dir()
+    out_path = os.path.join(OUTPUT_DIR, f"{job_id}.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+    print(f"[JD Parser] Saved JSON to {out_path}")
+
+# ---------- main extraction -------------------------------------------------
+def extract_jd_requirements(jd_text: str, max_retries: int = 3) -> dict:
     """
-    Extracts structured requirements from a job description using local LLM (Ollama).
-    Retries up to max_retries times if output is not valid JSON as required by the prompt.
-    Falls back to GPT-4o-mini if all retries fail.
-    Returns: dict with fields (required_skills, preferred_skills, min_experience_years, etc.)
+    Extract structured JD requirements → dict, add JOB_ID, write to disk.
     """
     prompt_template = load_prompt_template(PROMPT_PATH)
     prompt = prompt_template.replace("{JD_TEXT}", jd_text)
-    system = "You are an HR assistant who extracts structured job requirements from job descriptions and always returns well-formatted JSON."
-
-    # --- Try local model (Ollama) ---
+    system = (
+        "You are an HR assistant who extracts structured job requirements from "
+        "job descriptions and always returns well-formatted JSON."
+    )
+    jd_data=None
+    '''
+    # Try local model first
     for attempt in range(1, max_retries + 1):
-        print(f"[JD Parser] Attempt {attempt}: Extracting with local model...")
+        print(f"[JD Parser] Attempt {attempt}: Extracting with local model…")
         output = _call_ollama(prompt, system=system, max_tokens=1000, temperature=0.1)
         try:
             jd_data = json.loads(output)
-            print("[JD Parser] Successfully parsed JSON from local model.")
-            print(jd_data) 
+            print("[JD Parser] Parsed JSON from local model.")
+            break
         except json.JSONDecodeError:
-            print(f"[JD Parser] Failed to parse JSON on attempt {attempt}. Output was:\n{output}\n")
+            print(f"[JD Parser] JSON parse failed (attempt {attempt}).")
             time.sleep(1)
+            jd_data = None
+    '''
+    # Fallback → GPT-4o-mini
+    if jd_data is None:
+        print("[JD Parser] Local model failed. Falling back to GPT-4o-mini…")
+        output = gpt_generate(prompt, system=system, max_tokens=1000, temperature=0.4)
+        try:
+            jd_data = json.loads(output)
+            print("[JD Parser] Parsed JSON with GPT-4o-mini.")
+        except json.JSONDecodeError:
+            raise ValueError("Could not parse JD JSON after retries + fallback.")
 
-    # --- Fallback: GPT-4o-mini, only once ---
-    print("[JD Parser] All local model attempts failed. Using GPT-4o-mini fallback.")
-    output = gpt_generate(prompt, system=system, max_tokens=1000, temperature=0.4)
-    try:
-        jd_data = json.loads(output)
-        print("[JD Parser] Successfully parsed JSON using fallback GPT-4o-mini.")
-        return jd_data
-    except json.JSONDecodeError:
-        print(f"[JD Parser] Fallback GPT-4o-mini also failed to produce JSON. Output was:\n{output}\n")
-        raise ValueError("Unable to parse JD requirements as valid JSON after all retries and fallback.")
+    # ---------- add JOB_ID & persist ---------------------------------------
+    job_id = str(uuid.uuid4())          # universal unique ID
+    jd_data["JOB_ID"] = job_id
+    _save_json(job_id, jd_data)
 
-def parse_jd_from_file(jd_path):
-    """
-    Loads a job description from a file and extracts requirements using extract_jd_requirements.
-    """
-    with open(jd_path, 'r', encoding='utf-8') as f:
+    return jd_data
+
+def parse_jd_from_file(jd_path: str) -> dict:
+    with open(jd_path, "r", encoding="utf-8") as f:
         jd_text = f.read()
     return extract_jd_requirements(jd_text)
 
-# Remove after testing NOT PART OF MAIN CODE
+# ---------------------- CLI test block --------------------------------------
 if __name__ == "__main__":
-    import sys
-    # Accept JD file path from command line argument, or use default for quick testing
-    if len(sys.argv) > 1:
-        jd_path = sys.argv[1]
-    else:
-        jd_path = "data/job_descriptions/sample_jd.txt"
-        print(f"No file specified, using default: {jd_path}")
+    import sys, pprint
+
+    jd_path = sys.argv[1] if len(sys.argv) > 1 else "data\job_descriptions\DY_FS.txt"
+    print(f"[JD Parser] Using JD file: {jd_path}")
 
     try:
         result = parse_jd_from_file(jd_path)
-        print("\n--- Extracted Job Description Structure ---")
-        import pprint
+        print("\n--- Extracted JD Structure ---")
         pprint.pprint(result)
-    except Exception as e:
-        print(f"Error extracting JD requirements: {e}")
+    except Exception as exc:
+        print(f"Error extracting JD requirements: {exc}")

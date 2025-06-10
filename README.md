@@ -71,7 +71,7 @@ screening_agent/
 
 1. **Clone the repo**
     ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone https://github.com/Hrithik99/Screening-Agent.git
     cd your-repo-name
     ```
 

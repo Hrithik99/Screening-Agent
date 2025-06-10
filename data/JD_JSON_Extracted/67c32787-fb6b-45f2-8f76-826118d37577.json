@@ -1,0 +1,38 @@
+{
+  "required_skills": [
+    "Flutter",
+    "Dart",
+    "Node.js",
+    "Express.js",
+    "RESTful APIs",
+    "HTML5",
+    "CSS3",
+    "JavaScript"
+  ],
+  "preferred_skills": [
+    "React.js",
+    "Angular",
+    "Vue.js",
+    "MySQL",
+    "MongoDB"
+  ],
+  "min_experience_years": 7,
+  "max_experience_years": 10,
+  "required_qualifications": [
+    "BE/BTech, preferably with strong curriculum in Computer Sciences",
+    "MCA",
+    "MSc Computer Science (Optional)"
+  ],
+  "domain": "Software Development",
+  "soft_skills": [
+    "problem-solving",
+    "attention to detail",
+    "communication",
+    "interpersonal skills"
+  ],
+  "other_notes": [
+    "Have a constructive mind-set, constantly looking forward to enhancements.",
+    "Passionate about developing innovative mobile applications and backend systems."
+  ],
+  "JOB_ID": "67c32787-fb6b-45f2-8f76-826118d37577"
+}
