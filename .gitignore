@@ -43,7 +43,6 @@ test-results/
 
 # Data and log folders
 logs/
-data/outputs/
 data/*.csv
 data/*.xlsx
 data/*.pkl
