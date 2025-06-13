@@ -1,0 +1,39 @@
+Role – Scrum Master.
+
+Job Summary:
+We are seeking an experienced and motivated Scrum Master to join our team. As a Scrum Master, you will be the champion of the Scrum framework, coaching and guiding our development teams to deliver high-quality products during sprints. You will facilitate Scrum ceremonies, remove impediments, and foster a collaborative, self-organizing team environment to ensure project success. The ideal candidate is passionate about Agile methodologies, has excellent communication skills, and holds a recognized Scrum Master certification.
+
+Key Responsibilities:
+
+Facilitate Scrum Ceremonies: Lead and coordinate daily stand-ups, sprint planning, sprint reviews, retrospectives, and backlog refinement sessions to ensure effective team collaboration and alignment with project goals.
+Coach and Mentor: Guide team members and stakeholders on Agile/Scrum principles, practices, and values to promote continuous improvement and adherence to the Scrum framework.
+Remove Impediments: Identify and resolve obstacles that hinder the team’s progress, ensuring the team remains focused on sprint goals (e.g., addressing technical issues like server instability).
+Foster Collaboration: Work closely with Product Owners to manage product backlogs, prioritize tasks, and align team efforts with business objectives. Promote a safe and transparent environment for problem-solving and decision-making.
+Improve Team Performance: Use empirical data (e.g., sprint velocity, burndown charts) to assess team maturity, optimize performance, and drive higher productivity.
+Ensure Agile Adherence: Educate and support the organization in adopting Scrum and other Agile practices (e.g., Kanban, XP) while maintaining flexibility to adapt to team needs.
+Stakeholder Communication: Act as a liaison between the Scrum team, Product Owner, and external stakeholders to ensure transparency and alignment on project progress.
+Promote Continuous Improvement: Facilitate retrospectives to identify areas for improvement and implement actionable changes to enhance team workflows and processes.
+Tool Utilization: Leverage Agile project management tools (e.g., Jira, Trello, Rally) to track progress, manage backlogs, and maintain transparency.
+Qualifications and Skills:
+
+Education: Bachelor’s degree in Computer Science, Information Technology, Business, or a related field is preferred but may be waived with significant relevant experience (e.g., 5+ years in a similar role).
+Experience:
+Minimum of 2–3 years of experience as a Scrum Master for a software development team diligently applying Scrum principles and practices.
+Experience with scaled Agile frameworks (e.g., SAFe, LeSS) is a plus.
+Prior experience in software development or technology-related roles is beneficial for understanding team dynamics.
+Certifications:
+Required: Certified ScrumMaster® (CSM) from Scrum Alliance or Professional Scrum Master™ (PSM I or PSM II) from Scrum.org.
+Preferred: Advanced certifications such as Advanced Certified ScrumMaster (A-CSM), Certified Scrum Professional®-ScrumMaster (CSP-SM), SAFe Scrum Master, or PMI-Agile Certified Practitioner (PMI-ACP).
+Skills:
+Deep knowledge of Agile methodologies (Scrum, Kanban, XP, etc.) and their artifacts (e.g., user stories, burndown charts, definition of done).
+Exceptional communication, facilitation, and conflict-resolution skills.
+Strong leadership and servant leadership qualities to empower self-organizing teams.
+Proficiency with Agile tools such as Jira, Trello, or Rally.
+Analytical and problem-solving skills to anticipate and address risks or impediments.
+Ability to coach teams remotely or in-person and adapt to diverse stakeholder needs.
+Work Environment and Benefits:
+
+Flexible work hours, with options for remote or hybrid work arrangements.
+Competitive salary (varies by experience, industry, and location; specific salary details can be found at [e.g., Glassdoor or Monster]).
+Benefits include health insurance, paid time off, professional development opportunities, and unique perks like [insert company-specific benefits, e.g., commuter credits, wellness programs].
+Collaborative and innovative team culture focused on continuous learning and growth.

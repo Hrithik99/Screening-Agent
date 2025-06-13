@@ -24,6 +24,7 @@ def extract_job_duties_from_text(text, parsed_json, similarity_threshold=0.75):
     It handles multiple resume formats and is robust to formatting variation.
     """
     lines = [line.strip() for line in text.split('\n') if line.strip()]
+    print(lines)
     job_lines = []
     for i in range(len(lines) - 1):
         current = lines[i]
@@ -117,7 +118,7 @@ def extract_resume_info(resume_text, job_id, max_retries=3):
         print(f"[Resume Parser] Fallback GPT-4o-mini also failed to produce JSON. Output was:\n{output}\n")
         raise ValueError("Unable to parse resume as valid JSON after all retries and fallback.")
 
-def parse_resume_from_file(resume_path, job_id, candidate_id="candidate"):
+def parse_resume_from_file(resume_path):
     if resume_path.endswith('.pdf'):
         resume_text = pdf_to_text(resume_path)
     elif resume_path.endswith('.docx'):
@@ -126,7 +127,7 @@ def parse_resume_from_file(resume_path, job_id, candidate_id="candidate"):
         with open(resume_path, 'r', encoding='utf-8') as f:
             resume_text = f.read()
     #print(resume_text)
-    return extract_resume_info(resume_text, job_id, candidate_id)
+    return resume_text
 
 # ---------------------- CLI test runner ----------------------
 if __name__ == "__main__":
@@ -141,7 +142,8 @@ if __name__ == "__main__":
         print(f"[Resume Parser] Using default JOB_ID: {job_id}")
 
     try:
-        result = parse_resume_from_file(resume_path, job_id)
+        resume_text=parse_resume_from_file(resume_path)
+        result = extract_resume_info(resume_text, job_id, candidate_id='candidate')
         print("\n--- Extracted Resume Structure ---")
         pprint.pprint(result)
     except Exception as e:

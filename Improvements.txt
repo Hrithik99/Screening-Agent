@@ -3,3 +3,6 @@ Questions around the organisation culture - then score the cadidate's cultural f
 Hrithik Sarda may consider to research on ATS system recruiters use for candidates sorting...
 Skill based scoring for all the skills in Job description - Expereince based(years, scale[large or small scale exmp], Tools based expereince)
 Code for prompt splitting into chunks based on task complexity
+Add priotity weights option for the recruiter to alter weights that lead to final scoring of the candidate profile.
+Dynamic sorting of candidates under the screening process.
+Intergrate with hiring policies.

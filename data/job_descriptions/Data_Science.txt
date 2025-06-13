@@ -1,0 +1,56 @@
+Data Science Analyst - Python and Machine Learning
+Infosys · Bellevue, WA (On-site)
+
+About the job
+Job Description
+
+Infosys is seeking a Lead Data Scientist- High-Tech and Python experience. Ideal candidate will work on solving business problem for our Retail/CPG clients through data driven insights. Your role will combine a judicious and tactful blend of Hi-Tech domain, Analytical experience, Client interfacing skills, and solution design and business acumen so your insights not only enlighten the clients but also pave the way for launching deeper into future analysis. In this role, you would effectively communicate data-derived insights to non-technical audiences and mentor junior consultants/data scientists. The ideal candidate will be adept at refining user requirements, analyzing data to answer business queries; adept in quick starting optimization options to solve business problems using latest technologies in data mining, data visualization, statistical modeling, pattern recognition, and optimization across the chosen industry and functional area WITHIN the guidelines, policies and norms of Infosys. In this role, you would advise clients & internal teams on the right analytical models, analytic platforms and approaches to take in addressing complex, open-ended business problems. This role will be part of a learning culture, where teamwork and collaboration are encouraged, excellence is rewarded, and diversity is respected and valued.
+
+Required Qualifications
+
+ Bachelor’s degree or foreign equivalent required from an accredited institution. Will also consider three years of progressive experience in the specialty in lieu of every year of education. 
+ Candidate must be located within the commuting distance of Redmond, WA or Bellevue, WA, or be willing to relocate to the area. This is an on-site position. 
+ This position may require travel in the US. 
+ All applicants authorized to work in the United States are encouraged to apply 
+ At least 4 years of experience in Information Technology 
+ At least 4 years of experience in Data Science/Analytics 
+ At least 4 years experience in SQL for developing data pipelines 
+ Proven ability to create Data pipelines to source and transform Data 
+ At least 3 years' work experience with ML coding in Python 
+ 3+ years' ML experience doing hands-on in forecasting skills with timeseries and ML based models ( timeseries models, statistical model, ARIMA, ARIMAX, etc.) 
+ 4+ years' experience working with Big Data Platforms - specifically Azure 
+ 3+ years' e xperience with platforms alike to COSMOS (Scope) or Databricks (Pyspark) 
+ 2+ years using visualization tools, PowerBI preferred. 
+ 3+ years' specialty in performing analysis on movements of metrics, incorporating data pipeline and high-tech domain knowledge, and presenting the findings to stakeholders. 
+ 2+ years' experience in stakeholder presentation or advising on ML projects 
+
+Preferred Qualifications
+
+ MBA or MS from prestigious University in area of quantitative discipline such as Statistics, Applied Math, Operations Research, Computer Science, Engineering or Physics 
+ Familiarity with cloud platforms (AWS, GCP, Azure) 
+ Proven experience with GenAI and LLM 
+ Stay up-to-date with the latest research and advancements in High-Tech, ML/AI domain 
+ Strong communication and Analytical skills 
+ Ability to work in teams in a diverse, multi-stakeholder environment comprising of Business and Technology teams 
+ Experience and desire to work in a global delivery environment 
+
+Estimated annual compensation range for candidate based in the below locations will be
+
+ Redmond or Bellevue, WA: $73,000 to $122,275 
+
+Along with competitive pay, as a full-time Infosys employee you are also eligible for the following benefits :-
+
+ Medical/Dental/Vision/Life Insurance 
+ Long-term/Short-term Disability 
+ Health and Dependent Care Reimbursement Accounts 
+ Insurance (Accident, Critical Illness , Hospital Indemnity, Legal) 
+ 401(k) plan and contributions dependent on salary level 
+ Paid holidays plus Paid Time Off 
+
+The job may entail extensive travel. The job may also entail sitting as well as working at a computer for extended periods of time. Candidates should be able to effectively communicate by telephone, email, and face to face.
+
+About Us
+
+Infosys is a global leader in next-generation digital services and consulting. We enable clients in more than 50 countries to navigate their digital transformation. With over four decades of experience in managing the systems and workings of global enterprises, we expertly steer our clients through their digital journey. We do it by enabling the enterprise with an AI-powered core that helps prioritize the execution of change. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring digital skills, expertise, and ideas from our innovation ecosystem.
+
+Infosys provides equal employment opportunities to applicants and employees without regard to race; color; sex; gender identity; sexual orientation; religious practices and observances; national origin; pregnancy, childbirth, or related medical conditions; status as a protected veteran or spouse/family member of a protected veteran; or disability.

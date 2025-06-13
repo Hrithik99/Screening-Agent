@@ -1,0 +1,22 @@
+You are a resume screening assistant.
+
+Job Description:
+{JD_TEXT}
+
+Recruiter Resume Evaludation process:
+{CHECKLIST_TEXT}
+
+Your task is to extract a list of scoring features to evaluate resumes. These features should include:
+- Individual required technical or soft skills mentioned in the checklist or job description
+- Years of experience as a requirement
+- Any emphasized attributes (e.g., certifications, domain knowledge)
+
+For each eiligible feature, output:
+- feature_name - name of the feature
+- feature description - what does this feature measure in a candidate's resume
+- scoring_criteria (how should this feature be scored on candidates profile, e.g., 0 if this feature is not present at all). Ensure scale of 0-5.
+- explaination (detailed explaination based on the job description and checklist, how should a candidate be scored for the above feature? What are all the factors to consider while deciding the score)
+
+Impersonate the technical recruiter and return a JSON list of 8–10 key features for scoring candidates. Focus on required skills ( if any required technical skills: include all from job description as features), years of experience, domain knowledge, communication/soft skills, and any emphasized traits from the job description or checklist.
+Return all values as valid JSON. Wrap all scoring_criteria values in double quotes.
+Do NOT return anything other than valid JSON.

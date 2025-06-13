@@ -1,0 +1,79 @@
+1: Understand the Job Requirements 
+
+Review the job description carefully. 
+
+Identify key skills, experience levels, and qualifications needed. 
+
+Note any specific certifications, technologies, or domain expertise required. 
+
+2: Initial Resume Screening (Quick Scan) 
+
+Check for clear formatting and readability. 
+
+Look at the summary/profile section for relevance. 
+
+Ensure the candidate’s location and work authorization match the job requirements. 
+
+3: Technical Skill Match 
+
+Look for core technical skills related to the role (e.g., programming languages, frameworks, databases). 
+
+Evaluate tools and technologies proficiency (e.g., AWS, Azure, DevOps tools, etc.). 
+
+Check for relevant project experience showcasing practical application of skills. 
+
+4: Work Experience Analysis 
+
+Verify job titles and career progression (Are they moving up in roles?). 
+
+Assess company background (Startups, enterprises, consulting firms, etc.). 
+
+Look for stability vs. frequent job changes (job-hopping could be a red flag unless justified). 
+
+Ensure the candidate meets the required years of experience in relevant roles. 
+
+5: Certifications & Education Check 
+
+Validate relevant certifications (e.g., AWS Certified, PMP, CISSP, etc.). 
+
+Verify educational background (Does it align with the role?). 
+
+6: Project & Hands-on Experience Evaluation 
+
+Look for project details, responsibilities, and tech stack used. 
+
+Identify if the candidate has worked on similar-scale projects. 
+
+Check if they’ve used modern methodologies (Agile, DevOps, CI/CD). 
+
+7: Soft Skills & Communication 
+
+Look for teamwork, leadership, and problem-solving skills in job descriptions. 
+
+Evaluate clarity in resume writing (well-structured vs. vague descriptions). 
+
+If client interaction is needed, assess prior client-facing experience. 
+
+8: Cross-check Keywords & ATS Optimization 
+
+Ensure the resume contains keywords from the job description (important for ATS). 
+
+Look for action verbs (developed, implemented, optimized) instead of generic descriptions. 
+
+9: Red Flags to Watch For 
+
+Unexplained employment gaps (Ensure valid reasons). 
+
+Too many short-term jobs without contract explanations. 
+
+Overuse of buzzwords without evidence of real experience. 
+
+Mismatch in skills vs. job experience (e.g., 2 years of experience but claims "expert-level" proficiency). 
+
+10: Final Shortlisting & Submission 
+
+Pick the most relevant candidates based on skills, experience, and job fit. 
+
+Highlight key strengths when submitting to hiring managers. 
+
+Prepare questions for a pre-screening call before submitting to the client. 
