@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st # type: ignore
 import requests
 
 API_URL = "http://localhost:8000"
@@ -13,6 +13,7 @@ if "results_ready" not in st.session_state:
 
 if st.session_state.job_id is None:
     st.header("Create Job")
+    manual_job_id = st.text_input("Enter Job ID")
     jd_file = st.file_uploader("Job Description (.txt)", type=["txt"])
     checklist_file = st.file_uploader("Checklist (.txt, optional)", type=["txt"])
     if st.button("Create Job"):
@@ -21,12 +22,19 @@ if st.session_state.job_id is None:
         else:
             jd_text = jd_file.read().decode("utf-8")
             checklist_text = checklist_file.read().decode("utf-8") if checklist_file else None
+            payload = {
+                "job_id": manual_job_id.strip(),
+                "jd": jd_text,
+                "checklist": checklist_text
+            }
+
             try:
-                resp = requests.post(f"{API_URL}/jobs", json={"jd": jd_text, "checklist": checklist_text})
+                resp = requests.post(f"{API_URL}/jobs", json=payload)
                 resp.raise_for_status()
                 job_id = resp.json().get("job_id")
                 st.session_state.job_id = job_id
                 st.success(f"Job created with ID: {job_id}")
+                st.rerun()
             except Exception as e:
                 st.error(f"Job creation failed: {e}")
 else:

@@ -2,16 +2,16 @@
 
 import os
 import json
-import uuid
+#import uuid
 from datetime import datetime
 from local_model import _call_ollama
 from openai_model import generate as gpt_generate
 import pandas as pd
 import re
 
-PROMPT_PATH = os.path.join(os.path.dirname(__file__), "../prompts/feature_generation.txt")
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "../../data/outputs/feature_schemas")
-TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "../../data/outputs/scoring_sheets")
+PROMPT_PATH = os.path.join(os.path.dirname(__file__), "..\\prompts\\feature_generation.txt")
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..\\..\\data\\outputs\\feature_schemas")
+TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "..\\..\\data\\outputs\\scoring_sheets")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(TEMPLATE_DIR, exist_ok=True)
 def clean_llm_json(output: str):
@@ -25,6 +25,7 @@ def load_prompt_template(path):
 
 def save_feature_schema(job_id, feature_data):
     filename = os.path.join(OUTPUT_DIR, f"{job_id}_features.json")
+    #print('We are hereeeeeeeeeeeeeeeeeee',filename)
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(feature_data, f, indent=2)
     print(f"[Feature Generator] Saved schema to {filename}")
@@ -48,7 +49,7 @@ def create_excel_template(job_id, feature_list):
 
     return file_path
 
-def generate_features(jd_text, checklist_text=None, use_local_model=True, validate_loop=True):
+def generate_features(job_id, jd_text, checklist_text=None):
     prompt_template = load_prompt_template(PROMPT_PATH)
     prompt = prompt_template.replace("{JD_TEXT}", jd_text.strip())
     if checklist_text:
@@ -60,7 +61,7 @@ def generate_features(jd_text, checklist_text=None, use_local_model=True, valida
 
     output = None
     try:
-        print("[Feature Generator] Generating features using LLM...")
+        #print("[Feature Generator] Generating features using LLM...")
         output = gpt_generate(prompt, system, max_tokens=1500, temperature=0.3)
         #print(output)
         feature_list = clean_llm_json(output)
@@ -70,7 +71,7 @@ def generate_features(jd_text, checklist_text=None, use_local_model=True, valida
     except Exception as e:
         print(f"[Feature Generator] failed: {e}")
 
-    job_id = str(uuid.uuid4())
+    #job_id = str(uuid.uuid4())
     schema = {
         "job_id": job_id,
         "created_at": datetime.utcnow().isoformat(),
@@ -78,7 +79,7 @@ def generate_features(jd_text, checklist_text=None, use_local_model=True, valida
         "checklist": checklist_text or "",
         "features": feature_list
     }
-    print(schema)
+    #print("Job ID : ",job_id)
     schema_path = save_feature_schema(job_id, schema)
     #create_excel_template(job_id, feature_list)
     '''

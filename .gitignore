@@ -9,6 +9,8 @@ env/
 ENV/
 venv/
 .screening/
+.venv-ui/
+.ScreeningVenv311/
 # If you use Poetry or Pipenv, you can also add
 .poetry/
 Pipfile.lock
@@ -61,6 +63,8 @@ data/*.sqlite
 # PDF/DOCX resumes (do not upload sample or personal resumes)
 data/resumes/*.pdf
 data/resumes/*.docx
+data/resumes/*.doc
+data/resumes/*/*
 data/job_descriptions/*.pdf
 data/job_descriptions/*.docx
 

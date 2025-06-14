@@ -2,14 +2,15 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import FileResponse
 import os
 import sys
-
+from pydantic import BaseModel
+from fastapi import Body
 # Add modules folder to path so existing absolute imports work
 MODULES_DIR = os.path.join(os.path.dirname(__file__), "modules")
 if MODULES_DIR not in sys.path:
     sys.path.append(MODULES_DIR)
 
-from screening_agent.modules.feature_generator import generate_features
-from screening_agent.modules.scoring import run_scoring
+from modules.feature_generator import generate_features
+from modules.scoring import run_scoring
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 SCHEMA_DIR = os.path.join(ROOT_DIR, 'data', 'outputs', 'feature_schemas')
@@ -27,10 +28,23 @@ def _results_path(job_id: str) -> str:
     return os.path.join(SCORING_DIR, f"{job_id}_scored_candidates.xlsx")
 
 
+class JobRequest(BaseModel):
+    job_id: str
+    jd: str
+    checklist: str | None = None
+
+# ---------------- New endpoint ----------------
+@app.get("/jobs/{job_id}/exists")
+async def job_exists(job_id: str):
+    """Return whether a feature schema already exists for the supplied job_id"""
+    return {"exists": os.path.exists(_schema_path(job_id))}
+
+# ------------------------------------------------
+
 @app.post('/jobs')
-async def create_job(jd: str, checklist: str | None = None):
+async def create_job(payload: JobRequest = Body(...)):
     """Generate scoring schema for a new job."""
-    schema_path = generate_features(jd, checklist)
+    schema_path = generate_features(payload.job_id, payload.jd, payload.checklist)
     job_id = os.path.basename(schema_path).split('_')[0]
     return {"job_id": job_id}
 
